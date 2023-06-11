@@ -12,8 +12,8 @@
         <module>service-discovery</module>
         <module>configuration-center</module>
         <module>api-gateway</module>
-        <module>playlist-service</module>
-        <module>music-song-service</module>
+        <module>playlist-domain</module>
+        <module>music-song-domain</module>
     </modules>
 
     <properties>
