@@ -1,7 +1,7 @@
 # Api Gateway
 Using Spring Cloud Gateway
 ## TODO
-- [ ] make it works
+- [x] make it works
 - [ ] request rate limiting
 - [ ] register it to discovery service server
 - [ ] connect to application layer
