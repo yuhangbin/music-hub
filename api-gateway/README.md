@@ -1,5 +1,6 @@
 # Api Gateway
 Using Spring Cloud Gateway
+- Documentation: https://cloud.spring.io/spring-cloud-gateway/reference/html/#gateway-request-predicates-factories
 ## TODO
 - [x] make it works
 - [ ] request rate limiting
