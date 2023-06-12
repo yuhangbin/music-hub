@@ -1,12 +1,12 @@
-spring:
-  cloud:
-    gateway:
-      enabled: true
-      routes:
-      - id: route1
-        uri: http://localhost:9000
-        predicates:
-        - Path=/hello
+#spring:
+#  cloud:
+#    gateway:
+#      enabled: true
+#      routes:
+#      - id: route1
+#        uri: http://localhost:9000
+#        predicates:
+#        - Path=/**
 management:
   endpoints:
     web:
