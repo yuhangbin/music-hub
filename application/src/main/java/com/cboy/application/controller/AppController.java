@@ -9,10 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2023/6/11
  **/
 @RestController
+@RequestMapping(path = "/app")
 public class AppController {
 
 	@RequestMapping(path = "/hello", method = RequestMethod.GET)
 	public String hello() {
 		return "hello";
+	}
+
+	@RequestMapping(path = "/", method = RequestMethod.GET)
+	public String home() {
+		return "home";
 	}
 }
