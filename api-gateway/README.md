@@ -3,9 +3,16 @@ Using Spring Cloud Gateway
 - Documentation: https://cloud.spring.io/spring-cloud-gateway/reference/html/#gateway-request-predicates-factories
 ## TODO
 - [x] make it works
+- [x] route to application layer
+- [ ] circuit breaker support
 - [ ] request rate limiting
 - [ ] register it to discovery service server
-- [ ] connect to application layer
+- [ ] metrics - performance, SLA and so on.
+
+## Advance
+- [ ] WebSocket Support
+- [ ] Testing for rate limiting
+- [ ] Testing for circuit breaker
 
 ---
 Spring Cloud Gateway features:
