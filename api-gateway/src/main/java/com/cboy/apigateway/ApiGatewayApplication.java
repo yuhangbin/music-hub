@@ -5,7 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
+@RestController
 @SpringBootApplication
 public class ApiGatewayApplication {
 
@@ -25,7 +29,17 @@ public class ApiGatewayApplication {
 					.filters(f -> f.addResponseHeader("hello", "world"))
 				// the URI for the route
 					.uri(uri))
+			.route("fallback", p -> p.host("*.circuitbreaker.com")
+				.filters(f -> f.circuitBreaker(config -> config
+					.setName("mycmd")
+					.setFallbackUri("forward:/fallback")))
+				.uri(uri))
 			.build();
+	}
+
+	@RequestMapping(path = "/fallback")
+	public Mono<String> fallback() {
+		return Mono.just("fallback");
 	}
 
 }
