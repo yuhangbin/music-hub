@@ -9,11 +9,6 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>service-discovery</module>
-        <module>configuration-center</module>
-        <module>api-gateway</module>
-        <module>playlist-domain</module>
-        <module>music-song-domain</module>
     </modules>
 
     <properties>
