@@ -4,7 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.util.Enumeration;
 
 /**
  * @author yuhangbin
@@ -22,5 +25,31 @@ public class MySQLTest {
 		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PW)){
 			Assertions.assertNotNull(connection);
 		}
+	}
+
+	@Test
+	void testCreateTable() {
+
+	}
+
+
+	@Test
+	void testInsert() {
+
+	}
+
+	@Test
+	void testUpdate() {
+
+	}
+
+	@Test
+	void testDelete() {
+
+	}
+
+	@Test
+	void testSelect() {
+
 	}
 }

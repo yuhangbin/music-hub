@@ -6,5 +6,4 @@ package com.cboy.common.db;
  **/
 public interface MySQLClient {
 
-
 }
